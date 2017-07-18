@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="EncryptoBot_Proj.EncryptoBot_Proj" android:versionCode="1" android:versionName="1.0">
+  <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="21" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <application android:label="EncryptoBot_Proj" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
+    <activity android:label="Decryption" android:name="md57407c949a1d9b7129325175c3048822a.Decrypt_Actv" />
+    <activity android:label="Encryption" android:name="md57407c949a1d9b7129325175c3048822a.MainActivity" />
+    <activity android:label="Saved Keys" android:name="md57407c949a1d9b7129325175c3048822a.SavedKeys_Actv" />
+    <activity android:icon="@drawable/keywords" android:label="EncryptoBot" android:noHistory="true" android:theme="@style/Theme.Splash" android:name="md57407c949a1d9b7129325175c3048822a.SplashScreen_Actv">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="EncryptoBot_Proj.EncryptoBot_Proj.mono.MonoRuntimeProvider.__mono_init__" />
+    <!--suppress ExportedReceiver-->
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.EncryptoBot_Proj.EncryptoBot_Proj" />
+      </intent-filter>
+    </receiver>
+  </application>
+</manifest>
